@@ -1,0 +1,19 @@
+Error during cleanup: 
+TypeError {}
+message: "Cannot read properties of undefined (reading 'pieceNum_')"
+stack: "TypeError: Cannot read properties of undefined (reading 'pieceNum_')↵ at pathGetFront (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/firebase_database.js?v=8b78e2cb:2002:12)↵ at repoRemoveEventCallbackForQuery (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/firebase_database.js?v=8b78e2cb:7999:7)↵ at off (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/firebase_database.js?v=8b78e2cb:9175:3)↵ at https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/lib/firebase.ts:106:9↵ at Array.forEach (<anonymous>)↵ at FirebaseSignaling.cleanup (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/lib/firebase.ts:105:37)↵ at https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/hooks/use-firebase-signaling.ts:42:23↵ at https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/pages/home.tsx:152:11↵ at HTMLUnknownElement.callCallback2 (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-WERSD76P.js?v=8b78e2cb:3674:22)↵ at Object.invokeGuardedCallbackDev (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-WERSD76P.js?v=8b78e2cb:3699:24)"
+get stack: ƒ ()
+set stack: ƒ ()
+[[Prototype]]: Object
+
+at t.value (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
+Error setting up transfer: 
+DOMException {}
+stack: "InvalidStateError: Failed to execute 'createDataChannel' on 'RTCPeerConnection': The RTCPeerConnection's signalingState is 'closed'.↵ at WebRTCManager.createDataChannel (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/lib/webrtc.ts:41:44)↵ at https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/hooks/use-webrtc.ts:104:19↵ at https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/pages/home.tsx:108:7↵ at input.onchange (https://d4d4866e-5a8e-4869-9c74-5e6eb4bc2cf7-00-3slwqrwqy9q5r.janeway.replit.dev/src/components/file-upload-zone.tsx:63:9)"
+get stack: ƒ ()
+set stack: ƒ ()
+[[Prototype]]: DOMException
+

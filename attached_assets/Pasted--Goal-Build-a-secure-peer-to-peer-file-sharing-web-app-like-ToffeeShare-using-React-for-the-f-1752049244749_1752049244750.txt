@@ -1,0 +1,90 @@
+🚀 Goal:
+Build a secure, peer-to-peer file-sharing web app (like ToffeeShare) using React for the frontend and Firebase Realtime Database as the signaling backend. The app should allow users to send large files directly between browsers using WebRTC, without uploading to any server.
+
+Must have requirements
+1. full responsive 
+2. modern professional ui
+3. no pre box or section for links and qr codes
+4. initially there should be only interface for upload the file 
+5. when any file is uploaded then render a section with link and qr code with various social media sharing platforms icons
+6. when this qr code gets scanned or the generated links get clicked , then user will be redirected to a page and can download all the files in a once or can download one by one 
+7. once the windows or that page gets closed , the connection breaks instantly and file transfers stop
+8. if possible (optional) add a feature to live view the sender that receiver downloaded which files
+9. the connection should be established instantly once the user opens the site via the share link or qr code scan
+10. the connection should instantly breaks once the sender close that share page or receiver close the page
+11. no backend storage needed
+12. only real time firebase setup needed for connection setup
+13. this site will be free to use , encrypted
+14. so place some ads (google adsense ads with perfect sizes) containers in the page without ruining the user experience . both for pc and mobiles
+15. a header bar and footer bar for the pages links like disclaimer, privacy, about , contact pages
+17. fully responsive websiite
+
+
+✅ Functional Requirements:
+
+1. Frontend (React):
+- UI for sender:
+  - Select file
+  - Generate unique link
+  - Display QR code or shareable link
+- No file size limits
+
+2. WebRTC Integration:
+- Use WebRTC DataChannels for browser-to-browser file transfer
+- Implement chunked transfer using FileReader.readAsArrayBuffer() and Blob
+- Handle very large files in memory-efficient way
+
+3. Firebase (Backend):
+- Use Firebase Realtime Database for signaling only
+  - Store and listen for SDP offers, answers, and ICE candidates
+  - Create one signaling "room" per file transfer
+- Automatically delete room after transfer or timeout
+- Use Firebase Security Rules to limit access to signaling data
+
+4. Security:
+- End-to-end encryption is handled by WebRTC
+- No files are ever uploaded to Firebase or any server
+
+
+- Firebase configuration stored in environment variables
+- Optional: add PWA support for mobile use
+
+🔨 Tech Stack:
+
+Frontend: React (with Hooks)
+Backend (Signaling only): Firebase Realtime Database
+P2P File Transfer: WebRTC (DataChannel)
+
+🧪 more Features :
+- QR code generation for connection link
+- Multi-file or folder transfer via zip
+
+📦 Deliverables:
+- Full React frontend codebase
+- Firebase project setup with Realtime Database and security rules
+- README file with setup and deployment instructions
+- Working demo or deployable build
+- Firebase database.rules.json file with custom access rules
+
+✨ Sample Firebase DB structure:
+{
+  "rooms": {
+    "unique-room-id": {
+      "offer": { "type": "offer", "sdp": "..." },
+      "answer": { "type": "answer", "sdp": "..." },
+      "callerCandidates": [ ... ],
+      "calleeCandidates": [ ... ]
+    }
+  }
+}
+
+if you need these secret keys or datas below is the actual ones 
+
+SESSION_SECRET = [NlS3A9EMxbpexHWKF/madV0IFsgTMDbKVe5K277FxBpd/o3/bI5LVR4q69YtJl2AlgmA5hN8GuafCTpV85F58w==]
+VITE_FIREBASE_API_KEY = [AIzaSyAMHwlZS-n-FhwsToDh6kfaLlIYSKXWIu0]
+VITE_FIREBASE_APP_ID = [1:1044459738307:web:e2e1edc02683ee259afe76]
+VITE_FIREBASE_AUTH_DOMAIN = [sharewave-b2763.firebaseapp.com]
+VITE_FIREBASE_DATABASE_URL = [https://sharewave-b2763-default-rtdb.firebaseio.com]
+VITE_FIREBASE_MESSAGING_SENDER_ID = [1044459738307]
+VITE_FIREBASE_PROJECT_ID = [sharewave-b2763]
+VITE_FIREBASE_STORAGE_BUCKET = [sharewave-b2763.firebasestorage.app]
